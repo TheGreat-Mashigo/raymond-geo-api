@@ -1,7 +1,7 @@
 
 
 ##  Tagging a Docker image ###
-### docker build -t  shape-api/spring-boot-docker . ###
+### docker build -t  hlogi/spring-boot-docker . ###
 
 ## Running docker images cmd ##
 ### docker images  to view the running images ###
@@ -10,18 +10,21 @@
 ### docker run -p80:3000 shape-api/spring-boot-docker ###
 
 ## To run the container in a detached mode, you can supply argument -d:
-### docker run -d -p 80:80 hlogi/spring-boot-docker ###
+### docker run -d -p 8080:8080 hlogi/spring-boot-docker:v1 ###
 
 ## Re-tag the image with a version number: ##
-### docker tag shape-api/spring-boot-docker shape-api/spring-boot-docker:v1 ###
+### docker tag hlogi/spring-boot-docker hlogi/spring-boot-docker:v1 ###
 
 ## Push to dockerhub with  the following
 
-### docker push shape-api/spring-boot-docker:v1
+### docker push hlogi/spring-boot-docker:v1
 
 ### list Docker containers: ### docker ps
+
 ### inspect a container: ### docker inspect <container-id>
+
 ### Docker logs in a Docker container: ### docker logs <container-id>
+
 ### stop a running container: ### docker stop <container-id>
 
 ## docker restart ##
