@@ -46,3 +46,9 @@
 
 
 #### http://localhost:8080/v1/api/swagger-ui.html
+
+## To delete all containers including its volumes use
+### docker rm -vf $(docker ps -a -q)
+
+## To delete all the images
+### docker rmi -f $(docker images -a -q)
