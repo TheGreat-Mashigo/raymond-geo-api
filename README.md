@@ -40,3 +40,6 @@
 
 ## Swagger UI
 #### http://localhost:8080/swagger-ui.html
+
+
+#### http://localhost:8080/v1/api/swagger-ui.html
