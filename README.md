@@ -32,7 +32,11 @@
 
 ### docker restart my_container ###
 
+#### docker run -p 8080:8080 hlogi/spring-boot-docker
+
+### docker run -p8887:8888 hlogi/spring-boot-docker:latest
 #### docker run -p 8080:8080 shape-api/spring-boot-docker
+#### docker run -p 80:80 shape-api/spring-boot-docker
 
 #### http://localhost:8080/v2/api-docs
 
@@ -47,6 +51,7 @@
 
 
 #### http://localhost:8080/v1/api/swagger-ui.html
+#### http://localhost:8080/api/v1/swagger-ui.html
 
 ## To delete all containers including its volumes use
 ### docker rm -vf $(docker ps -a -q)

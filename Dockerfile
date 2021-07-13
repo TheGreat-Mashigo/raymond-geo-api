@@ -12,7 +12,8 @@ WORKDIR /app
 COPY --from=dependencies /app/target/raymond-shape-api.jar raymond-shape-api.jar
 ENV JAVA_OPTS=""
 EXPOSE 8080
-ENTRYPOINT exec java $JAVA_OPTS -jar raymond-shape-api.jar
+#ENTRYPOINT exec java $JAVA_OPTS -jar /raymond-shape-api.jar
+ENTRYPOINT ["java","-jar","raymond-shape-api.jar"]
 
 # run the app
 #CMD ["/usr/bin/java", "-jar", "raymond-shape-api.jar"]
