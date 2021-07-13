@@ -9,11 +9,12 @@
 ## Running a Docker image  ##
 ### docker run -p80:3000 shape-api/spring-boot-docker ###
 
+## Re-tag the image with a version number: ##
+### docker tag hlogi/spring-boot-docker hlogi/spring-boot-docker:v1 ###
+
 ## To run the container in a detached mode, you can supply argument -d:
 ### docker run -d -p 8080:8080 hlogi/spring-boot-docker:v1 ###
 
-## Re-tag the image with a version number: ##
-### docker tag hlogi/spring-boot-docker hlogi/spring-boot-docker:v1 ###
 
 ## Push to dockerhub with  the following
 
