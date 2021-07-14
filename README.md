@@ -1,19 +1,20 @@
 
 
-##  Tagging a Docker image ###
+##  Create Docker image ###
 ### docker build -t  hlogi/spring-boot-docker . ###
+### docker image build -t  hlogi/spring-boot-docker . ### step 1
 
 ## Running docker images cmd ##
-### docker images  to view the running images ###
+### docker images  ls    ## to view the running images ###
 
-## Running a Docker image  ##
-### docker run -p80:3000 shape-api/spring-boot-docker ###
+## Running a Docker image  ## Step 2
+### docker container run -p 8080:8080 hlogi/spring-boot-docker ###
 
-## Re-tag the image with a version number: ##
-### docker tag hlogi/spring-boot-docker hlogi/spring-boot-docker:v1 ###
-
-## To run the container in a detached mode, you can supply argument -d:
+## To run the container in a detached mode, you can supply argument -d: ### ## Step 3
 ### docker run -d -p 8080:8080 hlogi/spring-boot-docker:v1 ###
+
+## Re-tag the image with a version number:
+### docker tag hlogi/spring-boot-docker hlogi/spring-boot-docker:v1 ###
 
 
 ## Push to dockerhub with  the following
@@ -34,17 +35,14 @@
 
 #### docker run -p 8080:8080 hlogi/spring-boot-docker
 
-### docker run -p8887:8888 hlogi/spring-boot-docker:latest
-#### docker run -p 8080:8080 shape-api/spring-boot-docker
-#### docker run -p 80:80 shape-api/spring-boot-docker
-
-#### http://localhost:8080/v2/api-docs
+### Swagger url 
+#### http://localhost:8080/swagger-ui.html#/
 
 ## GET List of all shapes
-#### http://localhost:8080/api/v1/shape/list
+#### http://localhost:8080/swagger-ui.html#/shape-rest/listAllUsingGET
 
 ## create/add a shape
-#### http://localhost:8080/api/v1/shape/save
+#### http://localhost:8080/swagger-ui.html#/shape-rest/saveUsingPOST
 
 ## Swagger UI
 #### http://localhost:8080/swagger-ui.html
