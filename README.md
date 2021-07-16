@@ -1,25 +1,21 @@
 
 
 ##  Create Docker image ###
-### docker build -t  hlogi/spring-boot-docker . ###
-### docker image build -t  hlogi/spring-boot-docker . ### step 1
+### docker build -t  hlogi/spring-boot-docker:v2 . ###
 
-## Running docker images cmd ##
-### docker images  ls    ## to view the running images ###
+## Running docker images to view the running images ##
+### docker images  ls     ###
 
-## Running a Docker image  ## Step 2
-### docker container run -p 8080:8080 hlogi/spring-boot-docker ###
-
-## To run the container in a detached mode, you can supply argument -d: ### ## Step 3
-### docker run -d -p 8080:8080 hlogi/spring-boot-docker:v1 ###
+## Running a Docker image  ## 
+### docker run -p 8080:8080 hlogi/spring-boot-docker:v2 ###
 
 ## Re-tag the image with a version number:
-### docker tag hlogi/spring-boot-docker hlogi/spring-boot-docker:v1 ###
+### docker tag hlogi/spring-boot-docker:v2 hlogi/spring-boot-docker:v3 ###
 
 
 ## Push to dockerhub with  the following
 
-### docker push hlogi/spring-boot-docker:v1
+### docker push hlogi/spring-boot-docker:v2
 
 ### list Docker containers: ### docker ps
 
@@ -33,10 +29,8 @@
 
 ### docker restart my_container ###
 
-#### docker run -p 8080:8080 hlogi/spring-boot-docker
-
-### Swagger url 
-#### http://localhost:8080/swagger-ui.html#/
+[comment]: <> (Running Swagger)
+### [Swagger url](http://localhost:8080/swagger-ui.html#/)
 
 ## GET List of all shapes
 #### http://localhost:8080/swagger-ui.html#/shape-rest/listAllUsingGET
@@ -56,3 +50,7 @@
 
 ## To delete all the images
 ### docker rmi -f $(docker images -a -q)
+### docker images prune
+
+## run the docker image using image id
+### docker run -i -t f994713b61cb /bin/bash
